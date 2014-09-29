@@ -10,6 +10,7 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 
+Plugin 'fholgado/minibufexpl.vim'
 Plugin 'Jinja'
 Plugin 'klen/python-mode'
 Plugin 'scrooloose/nerdtree'
@@ -83,17 +84,29 @@ set incsearch
 set ignorecase
 
 
-" ----------- Nerdtree -------------------------------------------------------
+" ----------- MiniBufExplorer"  -----------------------------------------------
+" Focus buffer
+map <leader>bf :MBEFocus<CR>
+" Next buffer
+map <leader>bn :MBEbn<CR>
+" Focus buffer
+map <leader>bb :MBEbb<CR>
+
+
+" ----------- Nerdtree --------------------------------------------------------
 " Automatically open NERDTree when vim starts up and no files are specified
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
-" Shortcut
-map <leader>n :NERDTreeToggle<CR>
+map <leader>nf :NERDTreeFocus<CR>
+map <leader>nt :NERDTreeToggle<CR>
 
 " Automatically close vim if only NERDTree is left open
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 
-" ----------- python-mode ----------------------------------------------------
+" ----------- python-mode -----------------------------------------------------
 let g:pymode_paths = ['~/.vim/bundle/python-mode']
+
+
+
