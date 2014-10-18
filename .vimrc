@@ -35,7 +35,7 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 
-" ----------- Leader ---------------------------------------------------------
+" ----------- Leader ----------------------------------------------------------
 let mapleader=","
 let maplocalleader="\\"
 
@@ -46,8 +46,16 @@ map <Home> ^
 imap <Home> <Esc>^i
 
 
-" ----------- UTF-8 default encoding ------------------------------------------
+" ----------- Stuff -----------------------------------------------------------
+" UTF-8 default encoding
 set enc=utf-8
+
+" Backups
+set nobackup
+set noswapfile
+
+" Modeline
+set modeline
 
 
 " ----------- Folding ---------------------------------------------------------
@@ -65,10 +73,6 @@ set showcmd
 set statusline=%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
 
 
-" ----------- Modeline -------------------------------------------------------
-set modeline
-
-
 " ----------- Cursor and display ---------------------------------------------
 set ruler
 set cursorline
@@ -84,13 +88,56 @@ set incsearch
 set ignorecase
 
 
+" ----------- Syntax settings ------------------------------------------------
+" HTML
+autocmd FileType html,xhtml,htmldjango,htmljinja setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4 nowrap
+
+" LessCSS
+autocmd BufNewFile,BufRead *.less set filetype=less
+autocmd FileType less setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
+
+" Scss
+autocmd BufNewFile,BufRead *.scss set filetype=scss
+autocmd FileType scss setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
+
+" C/C++
+autocmd FileType cpp setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4
+autocmd FileType c setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4
+
+" CSS
+autocmd FileType css setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
+
+" RST
+autocmd BufNewFile,BufRead *.rst setlocal ft=rst
+autocmd FileType rst setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4 spell
+
+" Javascript
+autocmd FileType javascript setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
+
+" SQL
+autocmd FileType sql setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
+
+" Sh and Makefile
+autocmd FileType make,sh,ksh,zsh,csh,tcsh,bash setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4
+
+" LaTex
+autocmd BufNewFile,BufRead *.tex setlocal ft=tex
+autocmd FileType tex setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2 textwidth=78
+
+" Vim Syntax
+autocmd FileType vim setlocal expandtab shiftwidth=2 tabstop=8 softtabstop=2
+
+" JSON
+autocmd BufRead,BufNewFile *.json set ft=json 
+
+
 " ----------- MiniBufExplorer"  -----------------------------------------------
 " Focus buffer
-map <leader>bf :MBEFocus<CR>
+map <leader>mf :MBEFocus<CR>
 " Next buffer
-map <leader>bn :MBEbn<CR>
+map <leader>mn :MBEbn<CR>
 " Focus buffer
-map <leader>bb :MBEbb<CR>
+map <leader>mb :MBEbb<CR>
 
 
 " ----------- Nerdtree --------------------------------------------------------
@@ -107,6 +154,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 
 " ----------- python-mode -----------------------------------------------------
 let g:pymode_paths = ['~/.vim/bundle/python-mode']
+let g:pymode_rope_complete_on_dot = 0
 
 
 
