@@ -161,8 +161,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 
 
 " ----------- python-mode -----------------------------------------------------
+let g:pymode_breakpoint_cmd = 'import ipdb; ipdb.set_trace()  # TODO: debugger'
+let g:pymode_lint_ignore = "E128,E501"
 let g:pymode_paths = ['~/.vim/bundle/python-mode']
 let g:pymode_rope_complete_on_dot = 0
-
-
-
