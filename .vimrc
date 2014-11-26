@@ -74,22 +74,29 @@ set showcmd
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 
 
-" ----------- Cursor and display ---------------------------------------------
+" ----------- Cursor and display ----------------------------------------------
 set ruler
 set cursorline
 set lazyredraw  " Avoid scrolling problems
+set scrolloff=5
 syntax enable
 set number
 colorscheme monokai
 
+" ----------- History and Undo ------------------------------------------------
+set undofile
+set undodir=$HOME/.vim/undo
+set undolevels=10000
+set undoreload=10000
 
-" ----------- Search ---------------------------------------------------------
+
+" ----------- Search ----------------------------------------------------------
 set hlsearch
 set incsearch
 set ignorecase
 
 
-" ----------- Syntax settings ------------------------------------------------
+" ----------- Syntax settings -------------------------------------------------
 " HTML
 autocmd FileType html,xhtml,htmldjango,htmljinja setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4 nowrap
 
