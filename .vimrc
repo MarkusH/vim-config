@@ -14,6 +14,7 @@ Plugin 'fholgado/minibufexpl.vim'
 Plugin 'Jinja'
 Plugin 'klen/python-mode'
 Plugin 'scrooloose/nerdtree'
+Plugin 'tpope/vim-fugitive'
 
 
 " All of your Plugins must be added before the following line
@@ -70,7 +71,7 @@ set cmdheight=2
 set laststatus=2
 set showcmd
 
-set statusline=%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
+set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 
 
 " ----------- Cursor and display ---------------------------------------------
