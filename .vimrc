@@ -14,6 +14,7 @@ Plugin 'fholgado/minibufexpl.vim'
 Plugin 'Jinja'
 Plugin 'klen/python-mode'
 Plugin 'scrooloose/nerdtree'
+Plugin 'chase/vim-ansible-yaml'
 Plugin 'tpope/vim-fugitive'
 
 
