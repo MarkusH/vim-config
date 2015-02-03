@@ -127,8 +127,11 @@ autocmd FileType javascript setlocal expandtab shiftwidth=2 tabstop=2 softtabsto
 " SQL
 autocmd FileType sql setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
 
-" Sh and Makefile
-autocmd FileType make,sh,ksh,zsh,csh,tcsh,bash setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4
+" Makefile
+autocmd FileType make setlocal noexpandtab shiftwidth=4 tabstop=4 softtabstop=4
+
+" Sh
+autocmd FileType sh,ksh,zsh,csh,tcsh,bash setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4
 
 " LaTex
 autocmd BufNewFile,BufRead *.tex setlocal ft=tex
