@@ -143,6 +143,9 @@ autocmd FileType vim setlocal expandtab shiftwidth=2 tabstop=8 softtabstop=2
 " JSON
 autocmd BufRead,BufNewFile *.json set ft=json 
 
+" GIT
+autocmd FileType gitcommit set spell
+
 
 " ----------- MiniBufExplorer"  -----------------------------------------------
 " Focus buffer
