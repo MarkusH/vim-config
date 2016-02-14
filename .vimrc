@@ -61,8 +61,10 @@ set modeline
 
 
 " ----------- Folding ---------------------------------------------------------
-set foldmethod=indent  " automatically fold by indent level
+set foldmethod=syntax  " automatically fold by indent level
 set nofoldenable  " ... but have folds open by default
+set foldlevelstart=99
+nnoremap <Space> za
 
 
 " ----------- Statusbar and Linenumbers ---------------------------------------
