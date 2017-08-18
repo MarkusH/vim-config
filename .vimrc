@@ -100,6 +100,9 @@ set ignorecase
 
 
 " ----------- Syntax settings -------------------------------------------------
+" Python
+autocmd FileType python setlocal colorcolumn=79,119
+
 " HTML
 autocmd BufNewFile,BufRead *.j2 set filetype=htmljinja
 autocmd FileType html,xhtml,htmldjango,htmljinja setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4 nowrap
