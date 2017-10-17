@@ -16,6 +16,7 @@ Plugin 'klen/python-mode'
 Plugin 'scrooloose/nerdtree'
 Plugin 'chase/vim-ansible-yaml'
 Plugin 'tpope/vim-fugitive'
+Plugin 'vim-gitgutter'
 
 
 " All of your Plugins must be added before the following line
