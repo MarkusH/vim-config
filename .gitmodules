@@ -9,7 +9,7 @@
 	url = https://github.com/scrooloose/nerdtree.git
 [submodule "bundle/python-mode"]
 	path = bundle/python-mode
-	url = https://github.com/MarkusH/python-mode.git
+	url = https://github.com/klen/python-mode.git
 [submodule "bundle/minibufexpl.vim"]
 	path = bundle/minibufexpl.vim
 	url = https://github.com/fholgado/minibufexpl.vim.git
