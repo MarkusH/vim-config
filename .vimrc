@@ -12,7 +12,7 @@ Plugin 'gmarik/Vundle.vim'
 
 Plugin 'fholgado/minibufexpl.vim'
 Plugin 'Jinja'
-Plugin 'klen/python-mode'
+Plugin 'python-mode/python-mode'
 Plugin 'scrooloose/nerdtree'
 Plugin 'chase/vim-ansible-yaml'
 Plugin 'tpope/vim-fugitive'
@@ -181,3 +181,7 @@ let g:pymode_paths = ['~/.vim/bundle/python-mode']
 let g:pymode_rope_complete_on_dot = 0
 let g:pymode_rope_lookup_project = 0
 let g:pymode_rope = 0
+
+if has('nvim')
+  set mouse=a
+endif
